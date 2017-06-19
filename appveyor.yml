@@ -64,7 +64,6 @@ build: false
 test_script:
   # Change to a non-source folder to make sure we run the tests on the
   # installed library.
-  - "%CMD_IN_ENV% pip install --timeout=60 testfixtures unittest2 Morfessor==2.0.2a4 scikit-learn pyemd keras"
   - "mkdir empty_folder"
   - "cd empty_folder"
   - "pip install pyemd testfixtures unittest2 sklearn Morfessor==2.0.2a4"
