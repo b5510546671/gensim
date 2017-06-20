@@ -194,8 +194,8 @@ class TestDictionary(unittest.TestCase):
             self.assertEqual(serialized_lines[0], "3\n")
             self.assertEqual(len(serialized_lines), 4)
             # We do not know, which word will have which index
-            self.assertEqual(serialized_lines[1][1:], "\tdruhé\t2\n")
-            self.assertEqual(serialized_lines[2][1:], "\tprvé\t1\n")
+            self.assertEqual(serialized_lines[1][1:], u"\tdruhé\t2\n")
+            self.assertEqual(serialized_lines[2][1:], u"\tprvé\t1\n")
             self.assertEqual(serialized_lines[3][1:], "\tslovo\t3\n")
 
         d.save_as_text(tmpf, sort_by_word=False)
@@ -204,8 +204,8 @@ class TestDictionary(unittest.TestCase):
             self.assertEqual(serialized_lines[0], "3\n")
             self.assertEqual(len(serialized_lines), 4)
             self.assertEqual(serialized_lines[1][1:], "\tslovo\t3\n")
-            self.assertEqual(serialized_lines[2][1:], "\tdruhé\t2\n")
-            self.assertEqual(serialized_lines[3][1:], "\tprvé\t1\n")
+            self.assertEqual(serialized_lines[2][1:], u"\tdruhé\t2\n")
+            self.assertEqual(serialized_lines[3][1:], u"\tprvé\t1\n")
 
     def test_loadFromText_legacy(self):
         """

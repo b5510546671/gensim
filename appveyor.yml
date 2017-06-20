@@ -68,8 +68,8 @@ test_script:
   - "cd empty_folder"
   - "pip install pyemd testfixtures unittest2 sklearn Morfessor==2.0.2a4"
 
-  - "python -c \"import nose; nose.main()\" -s -v gensim"
-  # - "python -m nose -d --logging-level=DEBUG -vvv gensim.test.test_text_analysis"
+  # - "python -c \"import nose; nose.main()\" -s -v gensim"
+  - "python -m nose -d --logging-level=DEBUG -v gensim.test.test_corpora_dictionary"
   # Move back to the project folder
   - "cd .."
 
