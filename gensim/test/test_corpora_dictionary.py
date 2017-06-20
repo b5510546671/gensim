@@ -189,7 +189,7 @@ class TestDictionary(unittest.TestCase):
         d = Dictionary(small_text)
 
         d.save_as_text(tmpf)
-        with open(tmpf, 'rb') as file:
+        with open(tmpf, encoding="utf8") as file:
             serialized_lines = file.readlines()
             self.assertEqual(serialized_lines[0], "3\n")
             self.assertEqual(len(serialized_lines), 4)
@@ -199,7 +199,7 @@ class TestDictionary(unittest.TestCase):
             self.assertEqual(serialized_lines[3][1:], "\tslovo\t3\n")
 
         d.save_as_text(tmpf, sort_by_word=False)
-        with open(tmpf, 'rb') as file:
+        with open(tmpf, encoding="utf8") as file:
             serialized_lines = file.readlines()
             self.assertEqual(serialized_lines[0], "3\n")
             self.assertEqual(len(serialized_lines), 4)
